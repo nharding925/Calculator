@@ -23,8 +23,12 @@ public class Calculator {
             double result = num1 * num2;
             System.out.println("The product is: " + result);
         } else if (operation.equals("/")) {
-            double result = num1 / num2;
-            System.out.println("The quotient is: " + result);
+            if (num2 == 0) {
+                System.out.println("Error: Divide by Zero");
+            } else {
+                double result = num1 / num2;
+                System.out.println("The quotient is: " + result);
+            }
         } else {
             System.out.println("Invalid operation selected.");
         }
