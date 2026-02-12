@@ -10,8 +10,18 @@ public class Calculator {
         System.out.print("Enter the second number: ");
         int num2 = scanner.nextInt();
         
-        int result = num1 + num2;
-        System.out.println("The sum is: " + result);
+        System.out.print("Choose an operation (addition(+) or subtraction(-)): ");
+        String operation = scanner.next();
+        
+        if (operation.equals("+")) {
+            int result = num1 + num2;
+            System.out.println("The sum is: " + result);
+        } else if (operation.equals("-")) {
+            int result = num1 - num2;
+            System.out.println("The difference is: " + result);
+        } else {
+            System.out.println("Invalid operation selected.");
+        }
         
         scanner.close();
     }
